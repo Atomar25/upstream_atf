@@ -14,6 +14,7 @@ PLAT_INCLUDES		:=	-Iinclude/plat/arm/common/		\
 
 PLAT_BL_COMMON_SOURCES	:=	drivers/console/${ARCH}/console.S	\
 				drivers/ti/uart/${ARCH}/16550_console.S	\
+				plat/arm/common/arm_common.c \
 				${XLAT_TABLES_LIB_SRCS}			\
 				${AW_PLAT}/common/plat_helpers.S	\
 				${AW_PLAT}/common/sunxi_common.c

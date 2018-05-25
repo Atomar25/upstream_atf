@@ -39,4 +39,13 @@
 #define PLATFORM_MMAP_REGIONS		4
 #define PLATFORM_STACK_SIZE		(0x1000 / PLATFORM_CORE_COUNT)
 
+#define PLAT_ARM_NS_IMAGE_OFFSET    0x4a000000
+
+#ifdef SPD_opteed
+#define BL32_BASE                   SUNXI_DRAM_BASE
+#endif
+#ifdef SPD_none
+#undef BL32_BASE
+#endif
+
 #endif /* __PLATFORM_DEF_H__ */
